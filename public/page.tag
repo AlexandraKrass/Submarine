@@ -7,7 +7,7 @@
 <br>   <h2>"Dream and Work!"</h2> </P> 				 
 <input type="text" ref='name' id='name' placeholder="Введите марку субмарины" class="client1"  />
 <p> 
-<button ref="button" type="button" id='btn' class="btn" onclick={ get }>  Получить </button>
+<button ref="button" type="button" id='btn' class="btn" onclick={ get }>  Узнать </button>
 </p>
 
 </div>

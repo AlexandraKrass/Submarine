@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 
 app.use('/static', express.static('public'));
 app.use('/submit', boat);
-// app.use('/calculation', sale);
+app.use('/calculation', sale);
 
 app.listen(8080, function () {
   console.log('Listening on port 8080!');

@@ -14,15 +14,19 @@ var parametr = req.body.name;
 
 var data = JSON.stringify({ "mark": local});
 
- db.func( 'tst.boat_sale', data)
+ db.func( 'tst.selling', data)
 	.then( function( rs ){ 
 		
-		var list = rs[0]['boat_sale']
-		
+		var list = rs[0]['selling']
+
 		for( var summ = i = 0; i < list.length; i++ ){
 			summ += list[i].cost;
 		}
-		return res.json( summ )
+list.push(summ )
+
+			console.log(list)
+
+		return res.json( list )
 
 	}).catch( function( err ){
 
