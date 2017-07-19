@@ -3,16 +3,16 @@
  <col class="col1">
    <col span="1" class="coln">
    <tr>
- <td> <h3>{opts.data.mark}</h3> </td>
+ <td> <h3>{opts.data}</h3> </td>
  <td> <h3>{opts.data.cost}</h3> </td>
- <td> <h3>{opts.data.date}</h3> </td>
-  <td> <h3>{opts.data}</h3> </td>
+
+
 </tr>
   </table>  
 
 //  <script>
  var cost = opts.data;
- debugger
+ // debugger
  console.log(cost)
 
 // debugger

@@ -19,12 +19,12 @@ var data = JSON.stringify({ "mark": local});
 		
 		var list = rs[0]['selling']
 
-		for( var summ = i = 0; i < list.length; i++ ){
-			summ += list[i].cost;
-		}
-list.push(summ )
+		// for( var summ = i = 0; i < list.length; i++ ){
+		// 	summ += list[i].cost;
+		// }
 
-			console.log(list)
+		// 	list.push(summ )
+		// console.log(list)
 
 		return res.json( list )
 

@@ -3,13 +3,12 @@ Create or Replace Function tst.selling( query json ) returns json As $$
     Declare
         qb jsonb := query::jsonb;
         model varchar := cast( qb->>'mark' as varchar );
-        deal int := cast( qb->>'cost' as int );
-        data date := cast(qb->>'date' as date);
         sell json;
-               
+        total int;
     Begin
     
         -- Insert Into tstт.selling ( mark, cost ) 
+        Select sum(cost) From tst.realization t4 JOIN tst.boat t5 ON t4.boat=t5.id_boat into total WHERE mark = model ;
 
         Select array_to_json( array_agg( t3 ) ) From (
 
@@ -22,8 +21,8 @@ Create or Replace Function tst.selling( query json ) returns json As $$
             WHERE mark = model ORDER BY date ASC
 
         ) t3 Into sell;
-               
-        Return sell;
+      
+        Return json_build_object('sell', sell, 'total', total);
         
     End;
     
