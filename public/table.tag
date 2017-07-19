@@ -3,17 +3,17 @@
  <col class="col1">
    <col span="1" class="coln">
    <tr>
- <td> <h3>{opts.data}</h3> </td>
- <td> <h3>{opts.data.cost}</h3> </td>
+ <td> <h3>{opts.data.mark}</h3> </td>
+ <td> <h3>{opts.data.sum}</h3> </td>
 
 
 </tr>
   </table>  
 
 //  <script>
- var cost = opts.data;
- // debugger
- console.log(cost)
+ // var cost = opts.data;
+ // // debugger
+ // console.log(cost)
 
 // debugger
 // function arr(array){ 

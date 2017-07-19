@@ -2,7 +2,6 @@
 
 <div class="form2">
 <P> Данные о сделки данной марки </P> 				 
-<input type="text" ref='mark' value="Королева" id='mark' placeholder="Введите название" class="client2"  />
 <p> 
 <button ref="button" type="button" id='btn' class="btn" onclick={ list }>  Получить </button>
 </p>
@@ -20,28 +19,30 @@
     <list data={item} ></list>
   </virtual>
 
+<p> <label>Total:</label> { total }</p>
+
 <script>
 	
 	var tag = this
+	tag.total = ""
 	tag.items = []
 	
-	var btn, inp;
+	var btn;
 
 	tag.on('mount', function(){
 		
 		btn = tag.refs.button
-		inp = tag.refs.mark
 	
 	})
 
 	tag.list = function(){
 		
-		var name = inp.value // submarine type
 		var url = '/calculation'
 	  	var data = { name : name }
-
+/// { sell:[], total: 3}
 	  	var onresponse = function( data ) {
-	  		tag.items = data
+	  		tag.items = data.sell
+	  		tag.total = data.total
 	  		tag.update()
 	  	}
 	  	$.post( url, data ).done( onresponse )

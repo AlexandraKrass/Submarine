@@ -6,19 +6,22 @@ Create or Replace Function tst.selling( query json ) returns json As $$
         sell json;
         total int;
     Begin
-    
+     
+        --Select tst.selling('{"mark":"Королева"}');
         -- Insert Into tstт.selling ( mark, cost ) 
-        Select sum(cost) From tst.realization t4 JOIN tst.boat t5 ON t4.boat=t5.id_boat into total WHERE mark = model ;
+        Select sum(cost) From tst.realization into total;
 
         Select array_to_json( array_agg( t3 ) ) From (
 
           Select 
 
-               mark, cost, date
+               mark, sum(cost)
                 
               From tst.realization t1 JOIN tst.boat t2 ON t1.boat=t2.id_boat
-              
-            WHERE mark = model ORDER BY date ASC
+                         
+               GROUP BY mark 
+             
+             ORDER BY sum ASC
 
         ) t3 Into sell;
       
