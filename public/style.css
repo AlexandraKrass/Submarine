@@ -3,7 +3,7 @@ body {
 }
 
 .main { 
-	/*background: url(podlodka.png);*/
+	background: url(podlodka.png);
 	background-size: cover; 
 	text-align: center;
 	/*  position: fixed;*/
@@ -22,15 +22,15 @@ h1 {
 }
 
 h2 { 
-	color: rgb(139, 0, 0);
-	margin-left: 300px;
-	margin-top: 10px;
-	font-size: 70px;
+	color: #FFE4E1;
+	margin-bottom: -10px; 
+	margin-top: -30px;
+	font-size: 100px;
 }
 
 h3 { 
-/*	color: rgb(100, 0, 100);*/
-	/*text-align: auto;*/
+	color: #D2B48C;
+	text-align: auto;
 	font-size: 40px;
 }
 
@@ -47,15 +47,15 @@ h3 {
 
 .form2 {
 	margin-top: 30px;
-	margin-left: 549px;
+	margin-left: 700px;
 	text-align: left;
 }
 
 .form1 p {
-	font-weight:bold;
+	font-weight: bold;
 	margin-left: -64px; 
-	margin-top: 50px;
-	margin-bottom: -20px;
+	margin-top: 10px;
+	margin-bottom: -10px;
 	font-style: italic;
 	font-size: 42px;
 	color: #87CEFA;
@@ -69,7 +69,16 @@ h3 {
 }
 
 .client1 {
-	margin-left: 450px; 
+	margin-bottom: -300px;
+	margin-left: 200px; 
+}
+
+.client2 {
+	margin-bottom: 100px;
+	margin-left: 5px; 
+}
+
+.inp{
 	text-align: center;
    	color: #ffffff;
    	width: 350px; 
@@ -81,25 +90,12 @@ h3 {
 	font-size: 22px;
 }
 
-/*.client2 {
-	text-align: center;
-   	color: #ffffff;
-   	width: 300px; 
-    height: 40px; 
-    border-radius: 60px;
-   	border: solid 1px #FF8C00;
-   	background: transparent;
-   	outline: none;
-	font-size: 16px;
-}*/
-
 #name:hover, #btn:hover { 
 border: 1px solid #30ad64; 
 }
 
 .btn { 
 	 margin-top: -50px;
-	 margin-left: 513px; 
 	 border-radius: 60px;
  	 width: 350px;
  	 height: 65px;

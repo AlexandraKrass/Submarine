@@ -2,13 +2,13 @@
 
 <div>
 <H1>Добро пожаловать!</H1> 
+  <h2>"Dream and Work!"</h2> 
 <div class="form1">
-<P> Здесь вы можете получить данные о покупателях подводных лодок фирмы
-<br>   <h2>"Dream and Work!"</h2> </P> 				 
-<input type="text" ref='name' id='name' placeholder="Введите марку субмарины" class="client1"  />
-<p> 
-<button ref="button" type="button" id='btn' class="btn" onclick={ get }>  Узнать </button>
-</p>
+<P> Вы можете получить информацию о покупателях
+<br> подводной лодки нашей фирмы</P> 			
+<div class class="client1">	 
+<input type="text" ref='name' id='name' placeholder="Введите марку субмарины" class="inp"  />
+<button ref="button" type="button" id='btn' class="btn" onclick={ get }>  Узнать </button> </div>
 
 </div>
 </div>
@@ -27,7 +27,7 @@
 		
 		btn = tag.refs.button
 		inp = tag.refs.name
-	
+	 
 	})
 
 	tag.get = function(){

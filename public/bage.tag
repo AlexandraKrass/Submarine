@@ -1,17 +1,18 @@
 <bage>
 
-<div class="form2">
-<P> Данные о сделки данной марки </P> 				 
-<p> 
+<div class="form1">
+<P> Данные о продажах подводных лодок </P> 				 
+<div class="client2">
 <button ref="button" type="button" id='btn' class="btn" onclick={ list }>  Получить </button>
-</p>
+<h3> <label>Total:</label> { total }</h3></div> 
+
   <style>
    table {
-    table-layout: fixed; /* Фиксированная ширина ячеек */
-    width: 100%; /* Ширина таблицы */
+    table-layout: fixed; 
+    width: 40%; /* ширина табл */
    }
-   .col1 { width: 160px; }
-   .coln { width: 60px; }
+   .col1 { width: 100px; }
+   .coln { width: 70px; }
   </style>
 </div>
 
@@ -19,7 +20,7 @@
     <list data={item} ></list>
   </virtual>
 
-<p> <label>Total:</label> { total }</p>
+
 
 <script>
 	
