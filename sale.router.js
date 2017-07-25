@@ -5,7 +5,7 @@ var router = express.Router();
 
 router.post('/', ( req, res ) => {
 
-var data = JSON.stringify({ "mark": 'Королева'});
+var data = JSON.stringify({ "name": 'Королева'});
 
  db.func( 'tst.selling', data)
 	.then( function( rs ){ 

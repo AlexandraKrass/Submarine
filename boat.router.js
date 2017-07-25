@@ -13,7 +13,7 @@ var parametr = req.body.name;
 	var str = parametr.substring(1,n);
 	var local = upperResult + str;
 	
-var data = JSON.stringify({"mark": local});
+var data = JSON.stringify({"name": local});
 
  db.func( 'tst.boat_sale', data)
 	.then( function( rs ){ 

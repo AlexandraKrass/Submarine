@@ -1,12 +1,13 @@
 var express = require('express');
 var app = express();
-var boat = require('./boat.router');
-var sale = require('./sale.router');
 var bodyParser = require('body-parser');
 
 // parse application/x-www-form-urlencoded 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+
+var boat = require('./boat.router');
+var sale = require('./sale.router');
 
 app.use('/static', express.static('public'));
 app.use('/submit', boat);

@@ -4,7 +4,7 @@
 <P> Данные о продажах подводных лодок </P> 				 
 <div class="client2">
 <button ref="button" type="button" id='btn' class="btn" onclick={ list }>  Получить </button>
-<h3> <label>Total:</label> { total }</h3></div> 
+
 
   <style>
    table {
@@ -19,7 +19,7 @@
  <virtual each={ item in items}>
     <list data={item} ></list>
   </virtual>
-
+<h3> <label>Total:</label> { total }</h3></div> 
 
 
 <script>

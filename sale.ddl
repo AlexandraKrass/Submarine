@@ -15,11 +15,11 @@ Create or Replace Function tst.selling( query json ) returns json As $$
 
           Select 
 
-               mark, sum(cost)
+               name, sum(cost)
                 
-              From tst.realization t1 JOIN tst.boat t2 ON t1.boat=t2.id_boat
+              From tst.realization t1 JOIN tst.mark t2 ON t1.boat=t2.id
                          
-               GROUP BY mark 
+               GROUP BY name 
              
              ORDER BY sum ASC
 

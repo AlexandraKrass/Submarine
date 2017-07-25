@@ -3,7 +3,7 @@
  <col class="col1">
    <col span="1" class="coln">
    <tr>
- <td> <h3>{opts.data.mark}</h3> </td>
+ <td> <h3>{opts.data.name}</h3> </td>
  <td> <h3>{opts.data.sum}</h3> </td>
 
 
